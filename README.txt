@@ -5,7 +5,19 @@ Developed by Sumair Shah, Sejal Dua, Tim Ehlenbeck, Jake Hlavaty, Leon Hu, Matth
 
 DESCRIPTION
 
-The code found in this directory can be run locally to recreate the analysis completed as part of the project. The directory contains the following code files:
+The code found in this directory can be run locally to recreate the analysis completed as part of the project.
+
+The directory contains the following data files:
+
+>> pitch_data_2019.csv
+>> pitch_data_2020.csv
+>> pitch_data_2021.csv
+>> pitch_data_2022.csv
+>> pitch_data_2023.csv
+>> injury_data.csv
+>> injury_acwr.csv
+
+The directory contains the following code files:
  
 >>  1A_pitch_data.R
 
@@ -19,15 +31,7 @@ This R code provides functions to scrape injury data from FanGraphs. The first f
 
 This R code examines the relationship between baseball injuries and weather conditions. It starts by loading necessary libraries and defining lookup tables. The data cleaning process involves converting dates, filtering out incomplete data, and restricting the dataset to injuries after the date period of interest. The main loop iterates over each injury, retrieves game information for the relevant team and date, and aggregates it.
 
-The directory contains the following data files:
-
->> pitch_data_2019.csv
->> pitch_data_2020.csv
->> pitch_data_2021.csv
->> pitch_data_2022.csv
->> pitch_data_2023.csv
->> injury_data.csv
->> injury_acwr.csv
+>> 2A_analysis.ipynb
 
 The interactive visual tool is hosted on Tableau Public and can be found at the following link: 
 https://public.tableau.com/app/...
