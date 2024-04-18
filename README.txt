@@ -7,22 +7,27 @@ DESCRIPTION
 
 The code found in this directory can be run locally to recreate the analysis completed as part of the project. The directory contains the following code files:
  
- - 1A_pitch_data.R
+>>  1A_pitch_data.R
 
 This R code acquires baseball pitch level data from BaseballSavant.com for seasons 2019 to 2023. It iterates through each year, then loops through weeks within that year. For each week, it attempts to scrape data and retries on errors. Weekly dataframes are then combined for each year. Finally, all the data from each year is merged into a single dataframe and saved to a CSV file named "pitch_data.csv".
 
- - 1B_injury_data.R
+>> 1B_injury_data.R
 
- This R code provides functions to scrape injury data from FanGraphs. The first function, scrape_injury_report, takes a season year (defaulting to 2024) and constructs a URL for the FanGraphs injury report page. It then retrieves the content, parses the HTML, and attempts to target a table containing the injury data using a CSS selector.
+This R code provides functions to scrape injury data from FanGraphs. The first function, scrape_injury_report, takes a season year (defaulting to 2024) and constructs a URL for the FanGraphs injury report page. It then retrieves the content, parses the HTML, and attempts to target a table containing the injury data using a CSS selector.
 
- - 1C_weather_data.R
+>> 1C_weather_data.R
 
- This R code examines the relationship between baseball injuries and weather conditions. It starts by loading necessary libraries and defining lookup tables. The data cleaning process involves converting dates, filtering out incomplete data, and restricting the dataset to injuries after the date period of interest. The main loop iterates over each injury, retrieves game information for the relevant team and date, and aggregates it.
+This R code examines the relationship between baseball injuries and weather conditions. It starts by loading necessary libraries and defining lookup tables. The data cleaning process involves converting dates, filtering out incomplete data, and restricting the dataset to injuries after the date period of interest. The main loop iterates over each injury, retrieves game information for the relevant team and date, and aggregates it.
 
- The directory contains the following data files:
+The directory contains the following data files:
 
-
-
+>> pitch_data_2019.csv
+>> pitch_data_2020.csv
+>> pitch_data_2021.csv
+>> pitch_data_2022.csv
+>> pitch_data_2023.csv
+>> injury_data.csv
+>> injury_acwr.csv
 
 The interactive visual tool is hosted on Tableau Public and can be found at the following link: 
 https://public.tableau.com/app/...
