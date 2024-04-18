@@ -7,16 +7,6 @@ DESCRIPTION
 
 The code found in this directory can be run locally to recreate the analysis completed as part of the project.
 
-The directory contains the following data files:
-
->> pitch_data_2019.csv
->> pitch_data_2020.csv
->> pitch_data_2021.csv
->> pitch_data_2022.csv
->> pitch_data_2023.csv
->> injury_data.csv
->> injury_acwr.csv
-
 The directory contains the following code files:
  
 >>  1A_pitch_data.R
@@ -30,6 +20,14 @@ This R code provides functions to scrape injury data from FanGraphs. The first f
 >> 1C_weather_data.R
 
 This R code examines the relationship between baseball injuries and weather conditions. It starts by loading necessary libraries and defining lookup tables. The data cleaning process involves converting dates, filtering out incomplete data, and restricting the dataset to injuries after the date period of interest. The main loop iterates over each injury, retrieves game information for the relevant team and date, and aggregates it.
+
+Code files 1A_pitch_data.R and 1B_injury_data.R should produce the following data files in your local directory:
+>> pitchdata_2019.csv
+>> pitchdata_2020.csv
+>> pitchdata_2021.csv
+>> pitchdata_2022.csv
+>> pitchdata_2023.csv
+>> injury_data.csv
 
 >> 2A_analysis.ipynb
 

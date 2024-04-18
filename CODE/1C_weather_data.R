@@ -11,7 +11,7 @@ library(tidyverse)
 
 ###Lookup table and data load
 
-injuries <- read.csv("C:/Users/jake_/Downloads/Injury Master Sheet Rvsd 3.16.csv")
+injuries <- read.csv("./injury_data.csv")
 team_abrev <- c('ARI','ATL','BAL','BOS','CHC','CHW','CIN','CLE','COL','DET','HOU','KCR','LAA',
                 'LAD','MIA','MIL','MIN','NYM','NYY','OAK','PHI','PIT','SDP','SEA','SFG','STL',
                 'TBR','TEX','TOR','WSN')
@@ -76,6 +76,8 @@ for (i in 2:nrow(injuries)){
                  }
                  
 }
+
+
 ### Get Player Bio data
 
 #pulls all players for ids

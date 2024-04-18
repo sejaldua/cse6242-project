@@ -1,6 +1,5 @@
 ##### In case we want to scrape instead of download from Fangraphs -- we can use this function to get our injury data
 
-
 library(rvest)
 library(dplyr)
 library(httr)
