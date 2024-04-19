@@ -15,7 +15,7 @@ This R code acquires baseball pitch level data from BaseballSavant.com for seaso
 
 >> 1B_injury_data.R
 
-This R code provides functions to scrape injury data from FanGraphs. The first function, scrape_injury_report, takes a season year (defaulting to 2024) and constructs a URL for the FanGraphs injury report page. It then retrieves the content, parses the HTML, and attempts to target a table containing the injury data using a CSS selector.
+This Python code scrapes injury report tables from FanGraphs for seasons 2019 to 2023, using Requests-HTML to render pages. It then concatenates the scraped data into a single DataFrame and saves it as a CSV file named "injury_data.csv".
 
 >> 1C_weather_data.R
 
@@ -36,6 +36,9 @@ https://public.tableau.com/app/...
 
 INSTALLATION
 
+To install R packages, use the following command in the console: install.packages([PACKAGE])
+To install Python packages, use the following command in the terminal: python3 -m pip install [PACKAGE]
+
 I. DATA ACQUISITION
 
 Required R Packages / Libraries:
@@ -45,6 +48,11 @@ Required R Packages / Libraries:
 - library(rvest)
 - library(httr)
 
+Required Python Packages:
+- beautifulsoup4
+- requests_html
+- lxml[html_clean]
+
 II. DATA ANALYSIS / ALGORITHM
 
 The file 'analysis.ipynb' requires the following libraries installed:
@@ -52,8 +60,5 @@ The file 'analysis.ipynb' requires the following libraries installed:
  - matplotlib
  - seaborn
  - sklearn
-
- The following command can be used to install the libraries:
- python3 -m pip install pandas matplotlib seaborn sklearn
 
 EXECUTION
