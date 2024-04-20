@@ -76,7 +76,6 @@ III. VISUALIZATION
 
 Tableau Desktop 2023.3.2 (Professional Edition) must be installed to run our interactive visualization locally.
 
-
 EXECUTION (Loading the Tableau Workbook locally)
 
 The interactive visual tool we developed hosted on Tableau Public and can be found at the following link: 
