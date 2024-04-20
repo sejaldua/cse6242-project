@@ -119,4 +119,4 @@ To establish data source relationships:
 3. For each data source, select its respective name under 'Secondary data source', select 'Custom', and then 'Add'
 4. In the dialog, link the Game Date and Player Name between sources
 
-You should now be able to click into each of the two dashboard tabs and see data populating without error.
+You should now be able to click into each of the two dashboard tabs and see data populating without error. We hope you enjoy interacting with our visualization!
