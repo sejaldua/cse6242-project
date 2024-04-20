@@ -72,9 +72,9 @@ The file 'analysis.ipynb' requires the following libraries installed:
  - sklearn
  - scipy
 
- III. VISUALIZATION
+III. VISUALIZATION
 
- Tableau Desktop 2023.3.2 (Professional Edition)
+Tableau Desktop 2023.3.2 (Professional Edition) must be installed to run our interactive visualization locally.
 
 
 EXECUTION (Loading the Tableau Workbook locally)
@@ -109,7 +109,7 @@ C. 28Days
 
 The purpose of the 28Days dataset is to provide data for the numerator for the pACWR calculation. The table is an aggregate of the number of pitches thrown within the last 28 days of each Player-Game Date. The steps for creating this dataset can be found in 2A_analysis.ipynb. The relevant fields to export to a csv include player_name, game_date, pitch_count_28_days.
 
-Local Tableau Steps:
+Local Tableau Data Source Connection Steps:
 1. In Tableau Desktop, in the 'Data' menu select 'Add New Data Source'
 2. Select 'Text File' for csvs or 'More' for extracts and select the file
 3. Under 'Connection' in the top right, select 'Extract' to create a local data file (or 'Live' for automatic live connection)
