@@ -1,3 +1,5 @@
+-- The below SQL code snippets contain data wrangling / transformation steps for assembling the main Tableau data source, PrePostInjury
+
 --STEP1: SELECT DISTINCT PLAYER-GAMES FROM PITCH DATA
 select distinct player_name,game_date
 into #STEP1
