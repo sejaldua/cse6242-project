@@ -22,14 +22,10 @@ This Python code scrapes injury report tables from FanGraphs for seasons 2019 to
 This R code examines the relationship between baseball injuries and weather conditions. It starts by loading necessary libraries and defining lookup tables. The data cleaning process involves converting dates, filtering out incomplete data, and restricting the dataset to injuries after the date period of interest. The main loop iterates over each injury, retrieves game information for the relevant team and date, and aggregates it.
 
 Code files 1A_pitch_data.R and 1B_injury_data.R should produce the following data files in your local directory:
->> pitchdata_2019.csv
->> pitchdata_2020.csv
->> pitchdata_2021.csv
->> pitchdata_2022.csv
->> pitchdata_2023.csv
->> injury_data.csv
+(1) pitch_data.csv
+(2) injury_data.csv
 
-Note: in your programming language of choice, union the 5 pitchdata files to create a file containing all pitch data (we sometimes refer to this as combined pitch data).
+Note: some preprocessing needs to be done to prepare data sources (1) and (2) with a primary key such that merging as possible. We used Excel to wrangle the injury_data.csv. Specifically, the player name column was converted to a column named pitchdata_player_name, which includes the name of each pitcher who was injured, formatted in the form of '[LAST NAME], [FIRST NAME]'. Microsoft Excel or any programming language may be used to complete this step.
 
 >> 2A_analysis.py & 2A_analysis.html
 
@@ -86,19 +82,15 @@ https://public.tableau.com/app/profile/matthew.schulz3502/viz/InjuryImpactsAmong
 We have also provided the workbook as a Tableau workbook extract (.twbx) file. Since the data sources are all extracts in the provided files, no connectivity instructions should be absolutely necessary to load the visualization locally. However, for the sake of being thorough, below are instructions for how to set up the Tableau backend data sources assuming that all data has been acquired successfully:
 
 The data sources powering the Tableau dashboard are as follows:
-A. PrePostInjPerf
+A. PrePostInjury
 B. 7Days
 C. 28Days
 
-A. PrePostInjPerf
+A. PrePostInjury
 
-The purpose of the PrePostInjury table is to establish a dataset that displays performance before and after injury. There are two sources needed for this creation that are referenced in the 3A_preprocessing.sql code:
--#CombinedPitchData (a table containing all years of pitch data)
--#InjuryMaster (a table with player names & injury dates)
-
-Some preprocessing is necessary to clean up these two data sources, but it can be implemented using any programming language. In our case, since the injury data was so small, these steps were implemented in Microsoft Excel.
-1. Create a new field (pitchdata_player_name) to get the player name in the correct format (last name, first name) to merge with the pitch data.
-2. Create a new flag (INCLUDE) to differentiate pitcher & non-pitcher injuries. The raw data did include a position field but on a few occasions this field proved inaccurate. By matching the original injury list to the pitch data, we found some injured players listed as pitchers had no pitch data and, similarly, some non-pitchers had pitch data. Each match/mismatch in the two scenarios was investigated using baseball-reference.com game logs to determine if the player was actually a pitcher or if the player was a fielder asked to pitch on the rare occasion or two. This field should be filtered to 'Y' to analyze pitcher-only injuries.
+The purpose of the PrePostInjury table is to establish a dataset that displays performance before and after injury. There are two requisite data sources needed to assemble this merged data source. All data transformation steps are outlined in the 3A_preprocessing.sql code file:
+- #CombinedPitchData: This SQL table is created from the pitch_data.csv file, a data source containing all years of pitch data.
+- #InjuryMaster: This SQL table is created from injury_data_cleaned.csv, a table with player names & injury dates.
 
 B. 7Days 
 
